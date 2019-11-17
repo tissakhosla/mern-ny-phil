@@ -47,17 +47,3 @@ class App extends Component {
 }
 
 export default App;
-
-// const { error, isLoaded, orchestras, seasons } = this.state;
-// if (error) {
-//   return <div>Error: {error.message}</div>;
-// } else if (!isLoaded) {
-//   return <div>Loading...</div>;
-// } else {
-//   return (
-//     <div>
-//       <p>{orchestras}</p>
-//       <p>{seasons}</p>
-//     </div>
-//   );
-// }

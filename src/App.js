@@ -40,7 +40,10 @@ class App extends Component {
 
   render() {
     return (
-      <SeasonList {...this.state} />
+      <div>
+        <h2>Seasons</h2>
+        <SeasonList {...this.state} />
+      </div>
     )
 
   }

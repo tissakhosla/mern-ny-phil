@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import SeasonList from './components/SeasonList'
+import SeasonList from './components/SeasonList'
 import './App.css';
 
 
@@ -9,8 +9,8 @@ class App extends Component {
     this.state = {
       error: null,
       isLoaded: false,
-      orchestras: ["A", "B", "C"],
-      seasons: [1, 2, 3]
+      orchestras: [],
+      seasons: []
     };
   }
 
@@ -40,10 +40,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <p>{this.state.orchestras}</p>
-        <p>{this.state.seasons}</p>
-      </div>
+      <SeasonList {...this.state} />
     )
 
   }

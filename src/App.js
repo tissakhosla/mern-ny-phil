@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import OrchestraList from './components/OrchestraList'
 import SeasonList from './components/SeasonList'
 import './App.css';
 
@@ -41,6 +42,8 @@ class App extends Component {
   render() {
     return (
       <div>
+        <h2>Orchestras</h2>
+        <OrchestraList {...this.state} />
         <h2>Seasons</h2>
         <SeasonList {...this.state} />
       </div>

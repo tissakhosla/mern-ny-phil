@@ -14,29 +14,30 @@ class App extends Component {
     };
   }
 
-  // componentDidMount() {
-  //   fetch("http://localhost:8080/")
-  //     .then(res => res.json())
-  //     .then(
-  //       res => {
-  //         this.setState({
-  //           isLoaded: true,
-  //           orchestras: res.map(performance => {
-  //             return performance.orchestra
-  //           }),
-  //           seasons: res.map(performance => {
-  //             return performance.season
-  //           })
-  //         })
-  //       },
-  //       err => {
-  //         this.setState({
-  //           isLoaded: true,
-  //           error: "?"
-  //         })
-  //       }
-  //     )
-  // }
+  componentDidMount() {
+    fetch("http://localhost:8080/")
+      .then(res => res.json())
+      .then(
+        res => {
+          this.setState({
+            isLoaded: true,
+            orchestras: res.map(performance => {
+              return performance.orchestra
+            }),
+            seasons: res.map(performance => {
+              return performance.season
+            })
+          })
+        },
+        err => {
+          this.setState({
+            isLoaded: true,
+            error: "?"
+          })
+        }
+      )
+  }
+
   render() {
     return (
       <div>

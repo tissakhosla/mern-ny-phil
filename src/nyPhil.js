@@ -6,7 +6,7 @@ class Phil extends Component {
     super(props)
     
     this.state = {
-      allText: ""
+      NYPobj: {}
     }
     this.getData = this.getData.bind(this)
   }
@@ -17,7 +17,7 @@ class Phil extends Component {
       .then(res => {
         console.log(res)
         this.setState({
-          allText: res
+          NYPobj: res
         })
       })
   }
@@ -26,7 +26,6 @@ class Phil extends Component {
   }
 
   render() {
-    console.log(this.state.allText)
     return <TestComponent {... this.state} />
   }
 }

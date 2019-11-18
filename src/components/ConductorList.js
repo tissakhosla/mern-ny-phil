@@ -12,12 +12,13 @@ const ConductorList = (props) => {
   conductorArray = conductorArray.filter((item, index) => {
     return conductorArray.indexOf(item) === index
   })
+  
   for(var i = 0; i < conductorArray.length; i++){
     if(conductorArray[i] === undefined){
       conductorArray[i] = "None"
     }
   }
-  
+
   conductorArray = conductorArray.map(conductor => {
     let url = `http://localhost:8080/program/conductor/${conductor}`
     return (

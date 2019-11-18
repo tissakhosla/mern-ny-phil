@@ -1,36 +1,56 @@
-{
-  "performanceID": "1234567890-qwertyuiop",
-  "programID": "010101110101",
-  "orchestra": "GA SEI33 Electronic Music Group",
-  "season": "2019 to 20",
-  "concerts": [
-    {
-      "eventType": "One-Off",
-      "location": "Washington DC",
-      "venue": "Kennedy Center",
-      "date": "2020-09-02T04:00:00Z",
-      "time": "7:00PM"
-    }
-  ],
-  "works": [
-    {
-      "soloists": [
-        {
-          "name": "Zakk Flieschmann",
-          "instrument": "Kazoo",
-          "role": "Instructor"
-        },
-        {
-          "name": "Erin Kelley",
-          "instrument": "Electric Guitar",
-          "role": "Instructor"
-        }  
-      ],
-      "programID": "12345*54321",
-      "composer": "The Dog Sadie",
-      "title": "MERN API CRUD",
-      "movement": "Prelude to FUN TIMES",
-      "conductor": "Rez Dot Jaysahn"
-    }  
-  ]
-}
+  {
+    "_id": "5dd233c86012bfa25d6f259e",
+    "performanceID": "1234567890-qwertyuiop",
+    "programID": "010101110101",
+    "orchestra": "GA SEI33 Music",
+    "season": "2019 to 20",
+    "concerts": [
+      {
+        "_id": "5dd233c86012bfa25d6f259f",
+        "eventType": "One-Off",
+        "location": "Washington DC",
+        "venue": "Kennedy Center",
+        "date": "2020-09-02T04:00:00Z",
+        "time": "7:00PM"
+      },
+      {
+        "_id": "5dd233c86012bfa25d6f259f",
+        "eventType": "One-Off",
+        "location": "Philadelphia PA",
+        "venue": "South Jazz",
+        "date": "2020-09-02T04:00:00Z",
+        "time": "7:00PM"
+      }
+    ],
+    "works": [
+      {
+        "soloists": [
+          {
+            "_id": "5dd233c86012bfa25d6f25a2",
+            "name": "Paula Bannerman",
+            "instrument": "Laptop",
+            "role": "Instructor"
+          },
+          {
+            "_id": "5dd233c86012bfa25d6f25a2",
+            "name": "Zakk Flieschmann",
+            "instrument": "Kazoo",
+            "role": "Instructor"
+          },
+          {
+            "_id": "5dd233c86012bfa25d6f25a1",
+            "name": "Erin Kelley",
+            "instrument": "Electric Guitar",
+            "role": "Instructor"
+          }
+        ],
+        "_id": "5dd233c86012bfa25d6f25a0",
+        "programID": "12345*54321",
+        "composer": "The Dog Sadie",
+        "title": "MERN API CRUD",
+        "movement": "Prelude to FUN TIMES",
+        "conductor": "Rez Dot Jaysahn"
+      }
+    ],
+    "__v": 0
+  }

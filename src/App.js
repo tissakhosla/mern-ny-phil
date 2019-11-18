@@ -5,7 +5,6 @@ import ComposerList from './components/ComposerList'
 import ConductorList from './components/ConductorList'
 import './App.css';
 
-
 class App extends Component {
   constructor(props) {
     super(props);

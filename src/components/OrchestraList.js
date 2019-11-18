@@ -17,7 +17,7 @@ const OrchestraList = (props) => {
     )  
   })
 
-  console.dir(orchestraArray)
+  // console.dir(orchestraArray)
   return <div>{orchestraArray}</div>
 }
 

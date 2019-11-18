@@ -42,25 +42,35 @@ class App extends Component {
       )
   }
 
-  clickHandler() {
+  deleteHandler(eo) {
+    eo.preventDefault()
     let performanceId = prompt("Which ID should be deleted?")
 
-    fetch("http://localhost:8080/program/id/" + performanceId, {
+    let deleteMethod = {
       method: 'DELETE',
       headers: { 'content-type': 'application/json' }
-    })
-      .then( res => res.text())
-      .then( res => console.log(res))
+    }
+    fetch("http://localhost:8080/program/id/" + performanceId, deleteMethod)
+      .then(res => res.text())
+      .then(res => console.log(res))
+      .catch(err => console.log(err))
+  }
 
-    // fetch('https://example.com/delete-item/', {
-    //   method: 'DELETE',
-    //   headers: { 'content-type': 'application/json' },
-    //   body: JSON.stringify({ id: '5bdcdfa40f0a326f858feae0' })
-    // })
-    //   .then(res => res.text()) // OR res.json()
-    //   .then(res => console.log(res))
+  createHandler(eo) {
+    eo.preventDefault()
+    eo.persist()
 
+    const postMethod = {
+      method: 'POST',
+      headers: { 'Content-type': 'application/json; charset=UTF-8' },
+      body: JSON.stringify({season: "Fuzzy wuzzy was a bear"})
+    }
 
+    fetch("http://localhost:8080/program", postMethod)
+      .then(res => console.log(res))
+      .catch(err => console.log(err))
+
+    console.log(eo)
   }
 
   render() {
@@ -69,8 +79,13 @@ class App extends Component {
     return (
       <div>
         <div>
-          <button onClick={this.clickHandler}>DELETE</button>
+          <button onClick={this.deleteHandler}>DELETE</button>
         </div>
+        <form>
+          Season: <input type="text" name="season"></input>
+          <input label="performance" value="CREATE" type="submit" onClick={this.createHandler}></input>
+        </form>
+
         <h2>Orchestras</h2>
         <OrchestraList {...this.state} />
         <h2>Seasons</h2>

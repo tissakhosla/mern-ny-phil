@@ -10,11 +10,12 @@ const OrchestraList = (props) => {
     return performanceArray.indexOf(item) === index
   })
 
+
   let orchestraArray = performanceArray.map(orchestra => {
     let url = `http://localhost:8080/program/orchestra/${orchestra}`
-    return (
-    <a href={url}><button>{orchestra}</button></a>
-    )  
+    if(!orchestra) {
+      return <a href={url}><button>None</button></a>
+    } else return <a href={url}><button>{orchestra}</button></a>  
   })
 
   // console.dir(orchestraArray)

@@ -1,178 +1,36 @@
 {
-  "_id": "5dcf6ae8eddefe2c6e873193",
-  "performanceID": "745622f1-09af-451b-90aa-af4d51426b16-0.1",
-  "programID": "2599",
-  "orchestra": "NYP Presentation",
-  "season": "1983 to 84",
+  "performanceID": "1234567890-qwertyuiop",
+  "programID": "010101110101",
+  "orchestra": "GA SEI33 Electronic Music Group",
+  "season": "2019 to 20",
   "concerts": [
     {
-      "_id": "5dcf6ae8eddefe2c6e873194",
-      "eventType": "Horizons",
-      "location": "Manhattan NY",
-      "venue": "Avery Fisher Hall",
-      "date": "1984-06-01T04:00:00Z",
-      "time": "8:00PM"
+      "eventType": "One-Off",
+      "location": "Washington DC",
+      "venue": "Kennedy Center",
+      "date": "2020-09-02T04:00:00Z",
+      "time": "7:00PM"
     }
   ],
   "works": [
     {
       "soloists": [
         {
-          "_id": "5dcf6ae8eddefe2c6e8731ab",
-          "name": "Dempster Stuart",
-          "instrument": "Trombone",
-          "role": "Soloist"
-        }
-      ],
-      "_id": "5dcf6ae8eddefe2c6e8731aa",
-      "programID": "167*",
-      "composer": "Dempster Stuart",
-      "title": "STANDING WAVES1976"
-    },
-    {
-      "soloists": [
-        {
-          "_id": "5dcf6ae8eddefe2c6e8731a9",
-          "name": "Dempster Stuart",
-          "instrument": "Trombone",
-          "role": "Soloist"
-        }
-      ],
-      "_id": "5dcf6ae8eddefe2c6e8731a8",
-      "programID": "3371*",
-      "composer": "Erickson Robert",
-      "title": "GENERAL SPEECH FOR SOLO TROMBONE"
-    },
-    {
-      "soloists": [
-        {
-          "_id": "5dcf6ae8eddefe2c6e8731a7",
-          "name": "Deak Jon",
-          "instrument": "Double Bass",
-          "role": "Soloist"
-        }
-      ],
-      "_id": "5dcf6ae8eddefe2c6e8731a6",
-      "programID": "2310*",
-      "composer": "Gaburo Kenneth",
-      "title": "INSIDE QUARTET FOR ONE DOUBLEBASS PLAYER"
-    },
-    {
-      "soloists": [
-        {
-          "_id": "5dcf6ae8eddefe2c6e8731a5",
-          "name": "Deak Jon",
-          "instrument": "Double Bass",
-          "role": "Soloist"
-        }
-      ],
-      "_id": "5dcf6ae8eddefe2c6e8731a4",
-      "programID": "1431*",
-      "composer": "Deak Jon",
-      "title": "READINGS FROM STEPPENWOLF"
-    },
-    {
-      "soloists": [
-        
-      ],
-      "_id": "5dcf6ae8eddefe2c6e8731a3",
-      "programID": "0*",
-      "interval": "Intermission"
-    },
-    {
-      "soloists": [
-        {
-          "_id": "5dcf6ae8eddefe2c6e8731a2",
-          "name": "Galas Diamanda",
-          "instrument": "Soprano",
-          "role": "Soloist"
+          "name": "Zakk Flieschmann",
+          "instrument": "Kazoo",
+          "role": "Instructor"
         },
         {
-          "_id": "5dcf6ae8eddefe2c6e8731a1",
-          "name": "Zvonar Richard",
-          "instrument": "Live Signal Processing",
-          "role": "Assisting Artist"
-        }
+          "name": "Erin Kelley",
+          "instrument": "Electric Guitar",
+          "role": "Instructor"
+        }  
       ],
-      "_id": "5dcf6ae8eddefe2c6e8731a0",
-      "programID": "2631*",
-      "composer": "Galas Gals Diamanda",
-      "title": "YEUX SANS SANG LES EYES WITHOUT BLOOD"
-    },
-    {
-      "soloists": [
-        
-      ],
-      "_id": "5dcf6ae8eddefe2c6e87319f",
-      "programID": "4346*",
-      "interval": "Intermission-Short"
-    },
-    {
-      "soloists": [
-        {
-          "_id": "5dcf6ae8eddefe2c6e87319e",
-          "name": "Galas Diamanda",
-          "instrument": "Soprano",
-          "role": "Soloist"
-        }
-      ],
-      "_id": "5dcf6ae8eddefe2c6e87319d",
-      "programID": "3754*",
-      "composer": "Galas Gals Diamanda",
-      "title": "TRAGOUTHIA APO TO AIMA EXOUN FONOS"
-    },
-    {
-      "soloists": [
-        
-      ],
-      "_id": "5dcf6ae8eddefe2c6e87319c",
-      "programID": "0*",
-      "interval": "Intermission"
-    },
-    {
-      "soloists": [
-        {
-          "_id": "5dcf6ae8eddefe2c6e87319b",
-          "name": "Parran J D",
-          "instrument": "Soprano Saxophone",
-          "role": "Assisting Artist"
-        },
-        {
-          "_id": "5dcf6ae8eddefe2c6e87319a",
-          "name": "Ewart Douglas",
-          "instrument": "Alto Saxophone",
-          "role": "Assisting Artist"
-        },
-        {
-          "_id": "5dcf6ae8eddefe2c6e873199",
-          "name": "Ewart Douglas",
-          "instrument": "Flute",
-          "role": "Assisting Artist"
-        },
-        {
-          "_id": "5dcf6ae8eddefe2c6e873198",
-          "name": "Ewart Douglas",
-          "instrument": "Bass Clarinet",
-          "role": "Assisting Artist"
-        },
-        {
-          "_id": "5dcf6ae8eddefe2c6e873197",
-          "name": "Wadud Abdul",
-          "instrument": "Cello",
-          "role": "Assisting Artist"
-        },
-        {
-          "_id": "5dcf6ae8eddefe2c6e873196",
-          "name": "Anderson Ray",
-          "instrument": "Trombone",
-          "role": "Assisting Artist"
-        }
-      ],
-      "_id": "5dcf6ae8eddefe2c6e873195",
-      "programID": "1053*",
-      "composer": "Lewis George",
-      "title": "RAINBOW ROAD MESS AROUND"
-    }
-  ],
-  "__v": 0
+      "programID": "12345*54321",
+      "composer": "The Dog Sadie",
+      "title": "MERN API CRUD",
+      "movement": "Prelude to FUN TIMES",
+      "conductor": "Rez Dot Jaysahn"
+    }  
+  ]
 }

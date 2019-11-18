@@ -13,6 +13,12 @@ const ComposerList = (props) => {
     return composerArray.indexOf(item) === index
   })
 
+  for(var i = 0; i < composerArray.length; i++){
+    if(composerArray[i] === undefined){
+      composerArray[i] = "None"
+    }
+  }
+
   composerArray = composerArray.map(composer => {
     let url = `http://localhost:8080/program/composer/${composer}`
     return (

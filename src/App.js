@@ -94,17 +94,17 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.composerArrays)
-    // console.log(this.state.orchestras)
     return (
       <div>
+        <h2>CRUD with the New York Philharmonic</h2>
         <div>
-          <button onClick={this.createHandler}>CREATE</button>
-          <button onClick={this.deleteHandler}>DELETE</button>
+          <button onClick={this.createHandler}>CREATE</button><br></br>
+          <a href={"http://localhost:8080/program/"}><button>READ all</button></a><br></br>
           <form>
-          <button onClick={this.updateHandler}>UPDATE</button>
-            Enter ID to Update <input type="text"></input>
+            <button onClick={this.updateHandler}>UPDATE by id</button>
+            <input type="text"></input>
           </form>
+          <button onClick={this.deleteHandler}>DELETE</button><br></br>
         </div>
         <h2>Orchestras</h2>
         <OrchestraList {...this.state} />

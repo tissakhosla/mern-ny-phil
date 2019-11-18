@@ -1,68 +1,22 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# NY-Phil Basic Database Front-End
 
-## Available Scripts
+## General Notes
+1. Browser App displays buttons that direct straightaway to the API route itself. 
+1. Composer, Season, Conductor, or Orchestra buttons, when clicked, display all programs with the selected item. 
+1. Create allows one to paste a JSON tyoe object that matches the schema necessary, and appends the data-set. 
+1. Read button simply displays the whole set. More specific read functionality comes from the other buttons. 
+1. Update by Id button takes in an Id, and allows the user to paste necessary updates in the Prompt. 
+1. Delete removes a program based on the Id in the prompt. 
 
-In the project directory, you can run:
+## Future plans
+1. Each selection should display associated buttons. 
+ - for example if I click Pierre Boulez it should return all the buttons that match the performances associated with Pierre. 
+1. Search functionality needs to be added, as well as cross sectional search. 
+ - Let's say I want to find a program of Leonard Bernstein conducting Beethoven in a season between 1975 and 1980. 
+1. Add soloist, work title, and instrument buttons/search. 
 
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Dream Plans
+1. Use this database to create an app that allows musicians/anyone to keep a database of events. 
+ - properties include not only metaData (date, time, personnel, etc.) but also actual content (notes, PDFs, audio, video, etc.)
+ - the events could then be revisited with all necessary materials at hand. 
+2. I'd like to make this app, and all future apps to be accessible for use with screen readers seamlessly. 

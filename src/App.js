@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import OrchestraList from './components/OrchestraList'
 import SeasonList from './components/SeasonList'
 import ComposerList from './components/ComposerList'
+import ConductorList from './components/ConductorList'
 import './App.css';
 
 
@@ -14,7 +15,8 @@ class App extends Component {
 
       orchestras: [],
       seasons: [],
-      composerArrays: []
+      composerArrays: [],
+      conductorArrays: []
     };
   }
 
@@ -27,7 +29,8 @@ class App extends Component {
             isLoaded: true,
             orchestras: res.map(performance => { return performance.orchestra }),
             seasons: res.map(performance => { return performance.season }),
-            composerArrays: res.map(performance => { return performance.works.map(work => { return work.composer }) })
+            composerArrays: res.map(performance => { return performance.works.map(work => { return work.composer }) }),
+            conductorArrays: res.map(performance => { return performance.works.map(work => { return work.conductor }) })
           })
         },
         err => {
@@ -50,6 +53,8 @@ class App extends Component {
         <SeasonList {...this.state} />
         <h2>Composers</h2>
         <ComposerList {...this.state}/>
+        <h2>Conductors</h2>
+        <ConductorList {...this.state}/>
       </div>
     )
   }

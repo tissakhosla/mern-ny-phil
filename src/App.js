@@ -45,21 +45,12 @@ class App extends Component {
   createHandler(eo) {
     eo.preventDefault()
     eo.persist()
+    let newData = prompt("Please paste text for insertion!")
 
     const postMethod = {
       method: 'POST',
       headers: { 'Content-type': 'application/json; charset=UTF-8' },
-      body: JSON.stringify(
-        {
-          programID: eo.target.form[0].value,
-          season: eo.target.form[1].value,
-          concerts: [
-            {
-              works: [ eo.target.form[2].value, eo.target.form[3].value ]
-            }
-          ]
-        }
-      )
+      body: newData
     }
 
     fetch("http://localhost:8080/program", postMethod)
@@ -90,15 +81,8 @@ class App extends Component {
       <div>
         <div>
           <button onClick={this.deleteHandler}>DELETE</button>
+          <button onClick={this.createHandler}>CREATE</button>
         </div>
-        <form>
-          ProgramID: <input type="text" name="programID"></input>
-          Season: <input type="text" name="season"></input>
-          Work 1: <input type="text" name="work 1"></input>
-          Work 2: <input type="text" name="work 2"></input>
-          <input label="performance" value="CREATE" type="submit" onClick={this.createHandler}></input>
-        </form>
-
         <h2>Orchestras</h2>
         <OrchestraList {...this.state} />
         <h2>Seasons</h2>

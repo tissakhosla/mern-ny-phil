@@ -17,7 +17,7 @@ const SeasonList = (props) => {
     )  
   })
 
-  console.dir(seasonArray)
+  // console.dir(seasonArray)
   return <div>{seasonArray}</div>
 }
 

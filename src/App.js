@@ -42,19 +42,43 @@ class App extends Component {
       )
   }
 
+  clickHandler() {
+    let performanceId = prompt("Which ID should be deleted?")
+
+    fetch("http://localhost:8080/program/id/" + performanceId, {
+      method: 'DELETE',
+      headers: { 'content-type': 'application/json' }
+    })
+      .then( res => res.text())
+      .then( res => console.log(res))
+
+    // fetch('https://example.com/delete-item/', {
+    //   method: 'DELETE',
+    //   headers: { 'content-type': 'application/json' },
+    //   body: JSON.stringify({ id: '5bdcdfa40f0a326f858feae0' })
+    // })
+    //   .then(res => res.text()) // OR res.json()
+    //   .then(res => console.log(res))
+
+
+  }
+
   render() {
     console.log(this.state.composerArrays)
     // console.log(this.state.orchestras)
     return (
       <div>
+        <div>
+          <button onClick={this.clickHandler}>DELETE</button>
+        </div>
         <h2>Orchestras</h2>
         <OrchestraList {...this.state} />
         <h2>Seasons</h2>
         <SeasonList {...this.state} />
         <h2>Composers</h2>
-        <ComposerList {...this.state}/>
+        <ComposerList {...this.state} />
         <h2>Conductors</h2>
-        <ConductorList {...this.state}/>
+        <ConductorList {...this.state} />
       </div>
     )
   }

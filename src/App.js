@@ -60,6 +60,25 @@ class App extends Component {
     console.log(eo)
   }
 
+  updateHandler(eo) {
+    eo.preventDefault()
+    eo.persist()
+    console.log(eo)
+    let performanceId = eo.target.form[1].value
+    let newData = prompt("Editing " + performanceId + " Paste updated version here.")
+
+    let updateMethod = {
+      method: 'PUT',
+      headers: { 'content-type': 'application/json' },
+      body: newData
+    }
+
+    fetch("http://localhost:8080/program/id/" + performanceId, updateMethod)
+      .then(res => res.text())
+      .then(res => console.log(res))
+      .catch(err => console.log(err))
+  }
+
   deleteHandler(eo) {
     eo.preventDefault()
     let performanceId = prompt("Which ID should be deleted?")
@@ -80,8 +99,12 @@ class App extends Component {
     return (
       <div>
         <div>
-          <button onClick={this.deleteHandler}>DELETE</button>
           <button onClick={this.createHandler}>CREATE</button>
+          <button onClick={this.deleteHandler}>DELETE</button>
+          <form>
+          <button onClick={this.updateHandler}>UPDATE</button>
+            Enter ID to Update <input type="text"></input>
+          </form>
         </div>
         <h2>Orchestras</h2>
         <OrchestraList {...this.state} />

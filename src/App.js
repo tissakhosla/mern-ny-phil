@@ -42,6 +42,33 @@ class App extends Component {
       )
   }
 
+  createHandler(eo) {
+    eo.preventDefault()
+    eo.persist()
+
+    const postMethod = {
+      method: 'POST',
+      headers: { 'Content-type': 'application/json; charset=UTF-8' },
+      body: JSON.stringify(
+        {
+          programID: eo.target.form[0].value,
+          season: eo.target.form[1].value,
+          concerts: [
+            {
+              works: [ eo.target.form[2].value, eo.target.form[3].value ]
+            }
+          ]
+        }
+      )
+    }
+
+    fetch("http://localhost:8080/program", postMethod)
+      .then(res => console.log(res))
+      .catch(err => console.log(err))
+
+    console.log(eo)
+  }
+
   deleteHandler(eo) {
     eo.preventDefault()
     let performanceId = prompt("Which ID should be deleted?")
@@ -56,23 +83,6 @@ class App extends Component {
       .catch(err => console.log(err))
   }
 
-  createHandler(eo) {
-    eo.preventDefault()
-    eo.persist()
-
-    const postMethod = {
-      method: 'POST',
-      headers: { 'Content-type': 'application/json; charset=UTF-8' },
-      body: JSON.stringify({season: "Fuzzy wuzzy was a bear"})
-    }
-
-    fetch("http://localhost:8080/program", postMethod)
-      .then(res => console.log(res))
-      .catch(err => console.log(err))
-
-    console.log(eo)
-  }
-
   render() {
     console.log(this.state.composerArrays)
     // console.log(this.state.orchestras)
@@ -82,7 +92,10 @@ class App extends Component {
           <button onClick={this.deleteHandler}>DELETE</button>
         </div>
         <form>
+          ProgramID: <input type="text" name="programID"></input>
           Season: <input type="text" name="season"></input>
+          Work 1: <input type="text" name="work 1"></input>
+          Work 2: <input type="text" name="work 2"></input>
           <input label="performance" value="CREATE" type="submit" onClick={this.createHandler}></input>
         </form>
 
